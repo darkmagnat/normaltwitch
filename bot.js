@@ -1,9 +1,16 @@
-const Discord = require('discord.js')
-const client = new Discord.Client();
-client.on('ready', function(){
- console.log(`Logged in as ${client.user.tag}!`);
+const Discord = require('discord.js');
 
-const prefix = "#";
+const Util = require('discord.js');
+
+const queue = new Map();
+
+const ytdl = require('ytdl-core');
+
+const fs = require('fs');
+
+const gif = require("gif-search");
+
+const client = new Discord.Client({disableEveryone: true});
 ///////////////////////////
 ///////////////////////////
 const adminprefix = "#";
